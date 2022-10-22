@@ -1,22 +1,20 @@
 const express = require('express');
 const path = require('path');
 const pageRoutes = express.Router();
-const {logMethod} = require('../utils/logger');
+const {statusReport} = require('../utils/logger');
 
-
-pageRoutes.use((req, res, next) => {
-    logMethod(req.method, `${req.path}`)
-    next();
-});
 
 
 pageRoutes.get('/', (req, res) => {
-    res.sendFile(path.join(__dirname, '../public/index.html'));
+    const pagePath = path.join(__dirname, '../public/index.html');
+    
+    res.sendFile(pagePath);
 });
 
 pageRoutes.get('/notes', (req, res)=> {
-    res.sendFile(path.join(__dirname, '../public/notes.html'));
-})
+    const pagePath = path.join(__dirname, '../public/notes.html');
+    res.sendFile(pagePath);
+});
 
 
 

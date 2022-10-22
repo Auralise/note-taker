@@ -1,13 +1,10 @@
 const express = require('express');
 const path = require('path');
 const fs = require('fs/promises');
-const apiRoutes = express.Router();
-const {logMethod, statusReport} = require('../utils/logger');
+const {statusReport} = require('../utils/logger');
 
-apiRoutes.use((req, res, next)=> {
-    logMethod(req.method, `${req.path}`);
-    next();
-});
+const apiRoutes = express.Router();
+
 apiRoutes.use(express.json());
 
 apiRoutes.get('/notes', async (req, res) => {
