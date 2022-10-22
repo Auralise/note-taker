@@ -49,7 +49,7 @@ const statusReport = (statusCode, errorInformation) => {
             console.log(`${yellow}${timestamp} - Client error ${statusCode}\nError Text: ${errorInformation}${reset}`);
             break;
         case '5':
-            console.log(`${red}${timestamp} - Server error ${statusCode}\nError Test: ${errorInformation}${reset}`);
+            console.log(`${red}${timestamp} - Server error ${statusCode}\nError Text: ${errorInformation}${reset}`);
             break;
         default:
             console.log(`${red}${timestamp} - Error not implemented\nError Text: ${errorInformation}${reset}`);
