@@ -33,9 +33,28 @@ const logMethod = (method, text) => {
             console.log(`${yellow}${timestamp} - ${method} request: ${text}${text}${reset}`);
             break;
         default:
-            console.log(`${red}${timestamp} - Invalid Request received${reset}`);
+            console.log(`${red}${timestamp} - Invalid Request received. ${method} not implemented${reset}`);
     }
     
 }
 
+
+const statusReport = (statusCode, errorInformation) => {
+    const timestamp = getTimestamp();
+    switch (statusCode.toString().slice(0,1)){
+        case '2':
+            console.log(`${green}${timestamp} - Status code: ${statusCode} - Reply Okay!${reset}`);
+            break;
+        case '4': 
+            console.log(`${yellow}${timestamp} - Client error ${statusCode}\nError Text: ${errorInformation}${reset}`);
+            break;
+        case '5':
+            console.log(`${red}${timestamp} - Server error ${statusCode}\nError Test: ${errorInformation}${reset}`);
+            break;
+        default:
+            console.log(`${red}${timestamp} - Error not implemented\nError Text: ${errorInformation}${reset}`);
+    }
+}
+
 exports.logMethod = logMethod;
+exports.statusReport = statusReport;

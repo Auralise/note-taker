@@ -1,6 +1,7 @@
 const express = require('express');
 const path = require('path');
-const getRoutes = require('./routes/get-routes');
+const primaryRouter = require('./routes');
+
 
  
 
@@ -15,12 +16,8 @@ const app = express();
 app.use(express.static(path.join(__dirname, '/public')));
 
 
-app.use('/', getRoutes);
+app.use('/', primaryRouter);
 
-// app.get('/notes', (req, res) => {
-//     console.log(`${req.method}`)
-//     res.sendFile('public/notes.html');
-// })
 
 
 
