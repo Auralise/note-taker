@@ -10,7 +10,7 @@ const primaryRouter = express.Router();
 
 //Use middleware logger for all incoming requests
 primaryRouter.use((req, res, next)=> {
-    logMethod(req.method, `${req.path}`);
+    logMethod(req.method, `${req.originalUrl}`);
     next();
 });
 
