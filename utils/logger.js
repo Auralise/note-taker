@@ -27,7 +27,7 @@ const logMethod = (method, text) => {
             console.log(`${green}${timestamp} - ${method} request: ${text}${reset}`);
             break;
         case 'POST':
-            console.log(`${cyan}${timestamp} - ${method} request - ${text}${text}${reset}`);
+            console.log(`${cyan}${timestamp} - ${method} request - ${text}${reset}`);
             break;
         case 'DELETE':
             console.log(`${yellow}${timestamp} - ${method} request: ${text}${text}${reset}`);
