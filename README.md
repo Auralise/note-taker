@@ -11,6 +11,7 @@ The Note Taker application is an application designed to help you take and retai
 
 - [Installation](#installation)
 - [Usage](#usage)
+- [Screenshots](#screenshots)
 - [Tests](#tests)
 - [Technology](#technology)
 - [Credits](#credits)
@@ -37,6 +38,17 @@ npm start
 Once this starts, the console will log out the URL and port that it is listening on (by default this will be http://localhost:3001)
 
 Open your browser to start adding notes. 
+
+## Screenshots
+
+### Landing Page
+
+![image](https://user-images.githubusercontent.com/9697002/197461195-90100e04-7d03-401c-9e0b-ef721ea67943.png)
+
+### Notes page
+
+![image](https://user-images.githubusercontent.com/9697002/197461297-298d524d-baac-4ec4-97b2-019b604133cc.png)
+
 
 ## Tests
 
